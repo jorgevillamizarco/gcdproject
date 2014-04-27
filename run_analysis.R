@@ -86,10 +86,10 @@ values.in.mean.stdev <- function(x){
   lista  ##returns the list
 }
 
-## This Function receive a data frame result from the previous function (vaues.in.mean.stdev) and returns a tidy data set
+## This Function receive a data frame result from the previous function (create.data.set) and returns a tidy data set
 ## with calculated means for each variable, activity and subject. Returns a total of 100980 rows (561*6*30) and spends
 ## aprox 2 mins and 50 sec to finish the process.(I hope to improve this time in the future)
-## This function creates a file called "avg.var.act.subj.csv".
+## This function creates a file called "avg.var.act.subj.csv" with the resulting data set.
 subset.means <- function(x){
   df <- data.frame(variable= numeric(0), activity= numeric(0), subject= numeric(0), mean= numeric(0))
   df2 <- df
