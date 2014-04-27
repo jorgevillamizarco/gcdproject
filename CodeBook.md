@@ -31,13 +31,9 @@ This data set is created by the “subset.means()” function.
 
 Functions to perform the lecture of source information, analysis and creation of tidy data sets are located in “run_analysis.R”. 
 This R script contains 3 functions in the following order:
-•	create.data.set(): This function was made to read all the necessary files and build the tidy data set with all the information 
-requested in the project. All .txt source files must be located in the working directory within their original folder 
-"UCI HAR Dataset"and with their original organization. This function returns the tidy data set to a data frame and creates a 
-file called "result.ds.csv".  For a better explanation on how this function works please see the respective comments on “run_analysis.R” file.
-•	values.in.mean.stdev(): This Function extracts the values that are between -1 standard deviation and +1 standard deviation from the mean 
-for each measurement(each column) for a given data frame. The function receives a data frame and returns a list containing all the values that 
-meet the restriction for each measurement. Each element of the list contain processed values for each column of the original received data frame.
-•	subset.means():This Function receive a data frame result from the previous function (create.data.set) and returns a tidy data set with 
-calculated means for each variable, activity and subject. It, returns a total of 100980 rows (561*6*30) and spends aprox 2 mins and 50 sec to
-finish the process.(I hope to improve this time in the future). This function creates a file called "avg.var.act.subj.csv" with the resulting data set.
+
+•	create.data.set(): This function was made to read all the necessary files and build the tidy data set with all the information requested in the project. All .txt source files must be located in the working directory within their original folder "UCI HAR Dataset"and with their original organization. This function returns the tidy data set to a data frame and creates a file called "result.ds.csv".  For a better explanation on how this function works please see the respective comments on “run_analysis.R” file.
+
+•	values.in.mean.stdev(): This Function extracts the values that are between -1 standard deviation and +1 standard deviation from the mean for each measurement(each column) for a given data frame. The function receives a data frame and returns a list containing all the values that meet the restriction for each measurement. Each element of the list contain processed values for each column of the original received data frame.
+
+•	subset.means():This Function receive a data frame result from the previous function (create.data.set) and returns a tidy data set with calculated means for each variable, activity and subject. It, returns a total of 100980 rows (561*6*30) and spends aprox 2 mins and 50 sec to finish the process.(I hope to improve this time in the future). This function creates a file called "avg.var.act.subj.csv" with the resulting data set.
